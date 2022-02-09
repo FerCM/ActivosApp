@@ -1,0 +1,23 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+
+
+    <dimen name="orientacion_title_margin_general">10dp</dimen>
+    <dimen name="orientacion_title_margin_top">10dp</dimen>
+    <dimen name="orientacion_title_text_size">30sp</dimen>
+    <dimen name="orientacion_drop_down_margin_bottom">50dp</dimen>
+    <dimen name="orientacion_drop_down_margin_top">20dp</dimen>
+    <dimen name="orientacion_drop_down_content_content_left_second_text_start">30dp</dimen>
+
+    <dimen name="evidencia_anonima_tittle_text_size">25.0sp</dimen>
+
+    <dimen name="evidencia_anonima_image_margin_top">30dp</dimen>
+    <dimen name="evidencia_anonima_checkbox_margin_top">35dp</dimen>
+    <dimen name="evidencia_anonima_sides_general_margin">30dp</dimen>
+    <dimen name="evidencia_anonima_top_general_margin">20dp</dimen>
+    <dimen name="evidencia_anonima_button_top_margin">50dp</dimen>
+    <dimen name="evidencia_anonima_button_bottom_margin">50dp</dimen>
+
+
+</resources>

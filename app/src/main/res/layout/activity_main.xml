@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+      <RelativeLayout
+            android:id="@+id/module_display_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?android:actionBarSize">
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scrollView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rootView">
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/orientacion_title_margin_general"
+                        android:layout_marginStart="@dimen/orientacion_title_margin_general"
+                        android:layout_marginTop="@dimen/orientacion_title_margin_top"
+                        android:text="Registro de Activos"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/evidencia_anonima_tittle_text_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:contentDescription="Imagen Activo"
+                        android:id="@+id/ev_image_selected"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/evidencia_anonima_image_margin_top"
+                        android:adjustViewBounds="true"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textView29"
+                        app:srcCompat="@drawable/empty_image" />
+
+                    <FrameLayout
+                        android:animateLayoutChanges="true"
+
+                        android:id="@+id/frame_activo_nombre"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                        android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                        android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                        android:background="@drawable/edit_text_shape_input"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ev_image_selected">
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/edit_text_nombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:hint="Nombre activo"
+                            android:inputType="text"
+                            android:textSize="14sp"
+                            app:met_floatingLabel="highlight"
+                            tools:layout_editor_absoluteX="8dp"
+                            tools:layout_editor_absoluteY="263dp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frame_tipo_activo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                        android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                        android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                        android:animateLayoutChanges="true"
+                        android:background="@drawable/edit_text_shape_input"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/frame_activo_nombre">
+
+                        <Spinner
+                            android:id="@+id/tipo_activo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:hint="Tipo de Activo"
+                            android:inputType="text"
+                            android:textSize="14sp"
+                            app:met_floatingLabel="highlight"
+                            tools:layout_editor_absoluteX="8dp"
+                            tools:layout_editor_absoluteY="263dp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:animateLayoutChanges="true"
+                        android:id="@+id/frame_fecha_adquisicion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                        android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                        android:layout_marginTop="@dimen/evidencia_anonima_top_general_margin"
+                        android:background="@drawable/edit_text_shape_input"
+                        android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/frame_tipo_activo">
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/edit_text_fecha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:hint="Fecha Adquisición (dd/mm/aaaa)"
+                            android:inputType="datetime"
+                            android:textSize="14sp"
+                            app:met_floatingLabel="highlight"
+                            tools:layout_editor_absoluteX="8dp"
+                            tools:layout_editor_absoluteY="263dp"
+                            app:met_validateOnFocusLost="true"
+                            />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:animateLayoutChanges="true"
+                        android:id="@+id/frame_activo_desc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+
+                        android:layout_marginTop="@dimen/evidencia_anonima_checkbox_margin_top"
+                        android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                       android:padding="5dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/frame_fecha_adquisicion">
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/edit_text_activo_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                           android:gravity="top"
+                            android:hint="Descripción de activo"
+                            android:inputType="textMultiLine"
+                            android:maxLines="10"
+                            android:minLines="3"
+                            android:textSize="14sp"
+                            app:met_floatingLabel="highlight"
+                            tools:layout_editor_absoluteX="8dp"
+                            tools:layout_editor_absoluteY="263dp"
+                            app:met_validateOnFocusLost="true"
+                            />
+                    </FrameLayout>
+
+
+
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/floatingActionButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="160dp"
+                        android:layout_marginTop="160dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:fabSize="normal"
+                        app:layout_constraintStart_toStartOf="@+id/ev_image_selected"
+                        app:layout_constraintTop_toTopOf="@+id/ev_image_selected"
+                        app:srcCompat="@drawable/ic_camera_alt_black_24dp" />
+
+                    <Button
+                        android:id="@+id/btn_enviar"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/evidencia_anonima_button_bottom_margin"
+                        android:layout_marginEnd="@dimen/evidencia_anonima_sides_general_margin"
+                        android:layout_marginStart="@dimen/evidencia_anonima_sides_general_margin"
+                        android:layout_marginTop="@dimen/evidencia_anonima_button_top_margin"
+                        android:text="Guardar Activo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/frame_activo_desc" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
